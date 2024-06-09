@@ -27,6 +27,10 @@ serverFunc()
 app.use('/user', userRoutes)
 app.use('/auth', LoginRoute)
 app.use("/certificate", certificate);
+// app get
+app.get('/', (req, res) => {
+    res.send("Welcome to our API");
+})
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
